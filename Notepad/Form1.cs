@@ -125,5 +125,19 @@ namespace Notepad
         {
             richTextBox1.SelectAll();
         }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (richTextBox1.Text.Length > 0)
+            {
+                cutToolStripMenuItem.Enabled = true;
+                copyToolStripMenuItem.Enabled = true;
+            }
+            else
+            {
+                cutToolStripMenuItem.Enabled = false;
+                copyToolStripMenuItem.Enabled = false;
+            }
+        }
     }
 }
