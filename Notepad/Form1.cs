@@ -38,13 +38,13 @@ namespace Notepad
         {
             if (string.IsNullOrEmpty(filepath))
             {
-                using(SaveFileDialog sfd =  new SaveFileDialog() { Filter = "TextDocument|*.txt", ValidateNames = true)
+                using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "TextDocument|*.txt", ValidateNames = true)
                 {
                     if (sfd.ShowDialog() == DialogResult.OK)
                     {
-                        using(StreamWriter sw = new StreamWriter(sfd.FileName))
+                        using (StreamWriter sw = new StreamWriter(sfd.FileName))
                         {
-                            sw.WriteLineAsync(richTextBox1.Text); 
+                            sw.WriteLineAsync(richTextBox1.Text);
                         }
                     }
                 }
@@ -74,12 +74,21 @@ namespace Notepad
 
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            printPreviewDialog1.Document = printDocument1;
+            if (printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
         }
 
         private void eToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString(richTextBox1.Text, richTextBox1.Font, Brushes.Black, 12, 10);
         }
     }
 }
