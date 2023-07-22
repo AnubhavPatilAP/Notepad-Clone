@@ -139,5 +139,36 @@ namespace Notepad
                 copyToolStripMenuItem.Enabled = false;
             }
         }
+
+        private void wordWrapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (wordWrapToolStripMenuItem.Checked == true)
+            {
+                wordWrapToolStripMenuItem.Checked = false;
+                richTextBox1.WordWrap = false;
+            }
+            else
+            {
+                wordWrapToolStripMenuItem.Checked = true;
+                richTextBox1.WordWrap = true;
+            }
+        }
+
+        private void formatToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            fontDialog1.ShowDialog();
+            richTextBox1.SelectionFont = new Font(fontDialog1.Font.FontFamily, fontDialog1.Font.Size, fontDialog1, Font.Style);
+        }
+
+        private void highlightTextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionBackColor = Color.Yellow;
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About About = new About();
+            About.ShowDialog();
+        }
     }
 }
