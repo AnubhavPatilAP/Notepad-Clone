@@ -66,7 +66,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, formatToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 24);
+            menuStrip1.Size = new Size(226, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -200,21 +200,21 @@
             wordWrapToolStripMenuItem.Checked = true;
             wordWrapToolStripMenuItem.CheckState = CheckState.Checked;
             wordWrapToolStripMenuItem.Name = "wordWrapToolStripMenuItem";
-            wordWrapToolStripMenuItem.Size = new Size(180, 22);
+            wordWrapToolStripMenuItem.Size = new Size(147, 22);
             wordWrapToolStripMenuItem.Text = "Word wrap";
             wordWrapToolStripMenuItem.Click += wordWrapToolStripMenuItem_Click;
             // 
             // formatToolStripMenuItem1
             // 
             formatToolStripMenuItem1.Name = "formatToolStripMenuItem1";
-            formatToolStripMenuItem1.Size = new Size(180, 22);
+            formatToolStripMenuItem1.Size = new Size(147, 22);
             formatToolStripMenuItem1.Text = "Format";
             formatToolStripMenuItem1.Click += formatToolStripMenuItem1_Click;
             // 
             // highlightTextToolStripMenuItem
             // 
             highlightTextToolStripMenuItem.Name = "highlightTextToolStripMenuItem";
-            highlightTextToolStripMenuItem.Size = new Size(180, 22);
+            highlightTextToolStripMenuItem.Size = new Size(147, 22);
             highlightTextToolStripMenuItem.Text = "Highlight text";
             highlightTextToolStripMenuItem.Click += highlightTextToolStripMenuItem_Click;
             // 
@@ -234,10 +234,11 @@
             // 
             // richTextBox1
             // 
+            richTextBox1.AccessibleRole = AccessibleRole.None;
             richTextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             richTextBox1.Location = new Point(0, 27);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(800, 423);
+            richTextBox1.Size = new Size(226, 187);
             richTextBox1.TabIndex = 1;
             richTextBox1.Text = "";
             richTextBox1.TextChanged += richTextBox1_TextChanged;
@@ -268,12 +269,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(226, 214);
             Controls.Add(richTextBox1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "Form1";
-            Text = "Form1";
+            Text = "Notepad";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -304,12 +305,12 @@
         private ToolStripMenuItem helpToolStripMenuItem;
         private ToolStripMenuItem highlightTextToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;
-        private RichTextBox richTextBox1;
         private OpenFileDialog openFileDialog1;
         private SaveFileDialog saveFileDialog1;
         private PrintDialog printDialog1;
         private PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private FontDialog fontDialog1;
+        protected RichTextBox richTextBox1;
     }
 }

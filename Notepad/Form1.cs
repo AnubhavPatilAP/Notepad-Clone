@@ -38,7 +38,7 @@ namespace Notepad
         {
             if (string.IsNullOrEmpty(filepath))
             {
-                using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "TextDocument|*.txt", ValidateNames = true)
+                using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "TextDocument|*.txt", ValidateNames = true })
                 {
                     if (sfd.ShowDialog() == DialogResult.OK)
                     {
@@ -60,7 +60,7 @@ namespace Notepad
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "TextDocument|*.txt", ValidateNames = true)
+            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "TextDocument|*.txt", ValidateNames = true })
             {
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
@@ -157,7 +157,7 @@ namespace Notepad
         private void formatToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             fontDialog1.ShowDialog();
-            richTextBox1.SelectionFont = new Font(fontDialog1.Font.FontFamily, fontDialog1.Font.Size, fontDialog1, Font.Style);
+            richTextBox1.SelectionFont = new Font(fontDialog1.Font.FontFamily, fontDialog1.Font.Size, fontDialog1.Font.Style);
         }
 
         private void highlightTextToolStripMenuItem_Click(object sender, EventArgs e)

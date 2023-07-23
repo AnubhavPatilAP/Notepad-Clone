@@ -15,3 +15,4 @@ E:\C#Projects\Notepad\Notepad\obj\Debug\net6.0-windows\refint\Notepad.dll
 E:\C#Projects\Notepad\Notepad\obj\Debug\net6.0-windows\Notepad.pdb
 E:\C#Projects\Notepad\Notepad\obj\Debug\net6.0-windows\Notepad.genruntimeconfig.cache
 E:\C#Projects\Notepad\Notepad\obj\Debug\net6.0-windows\ref\Notepad.dll
+E:\C#Projects\Notepad\Notepad\obj\Debug\net6.0-windows\Notepad.About.resources
